@@ -1,0 +1,30 @@
+{
+  "name": "samluvanda/o365-sendmail",
+  "description": "The Laravel Office 365 Mail Transport",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "O365Sendmail\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Samson Luvanda",
+      "email": "s_luvanda@hotmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^10.0|^11.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "O365Sendmail\\ServiceProvider"
+      ]
+    }
+  },
+  "prefer-stable": true
+}

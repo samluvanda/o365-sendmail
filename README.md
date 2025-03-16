@@ -11,3 +11,6 @@ If you discover a security vulnerability within o365-sendmail, please send an e-
 
 ## License
 The o365-sendmail is open-sourced software licensed under the <a href="https://opensource.org/licenses/MIT">MIT license</a>.
+
+## Thanks
+Thanks to <a href="https://github.com/underdpt">underdpt</> for providing us with VPS for hosting documentation. :relaxed:

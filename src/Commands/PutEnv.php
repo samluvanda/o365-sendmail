@@ -29,7 +29,7 @@ class PutEnv extends Command
      */
     public function handle(): void
     {
-        $env = file_get_contents(base_path('.env'));
+        $env = trim(file_get_contents(base_path('.env')));
 
         if (Str::contains($env, 'O365SENDMAIL_TENANT') || Str::contains($env, 'O365SENDMAIL_CLIENT_ID') || Str::contains($env, 'O365SENDMAIL_CLIENT_SECRET')) {
             $this->error('Env file already contains o365-sendmail environment variables.');
@@ -40,9 +40,10 @@ class PutEnv extends Command
         file_put_contents(base_path('.env'), [
             $env,
             PHP_EOL,
+            PHP_EOL,
             file_get_contents(__DIR__ . '/../../config/.env.o365-sendmail')
         ]);
-        Artisan::call('config:clear');
+        Artisan::call('optimize:clear');
         $this->info('O365-sendmail environment variables set successfully.');
     }
 }
